@@ -1,263 +1,541 @@
-<?php
-/**
- * Online-Job-Portal - A web application built on PHP HTML & javascript
-Copyright (C) 2016 Sreelal C
+<?php include('parts/header.php') ?>
+        <section class="pxp-hero vh-100" style="background-color: var(--pxpMainColorLight);">
+            <div class="pxp-hero-caption">
+                <div class="pxp-container">
+                    <div class="row pxp-pl-80 align-items-center justify-content-between">
+                        <div class="col-12 col-xl-6 col-xxl-5">
+                            <h1>Find the perfect<br><span style="color: var(--pxpMainColor);">job</span> for you</h1>
+                            <div class="pxp-hero-subtitle mt-3 mt-lg-4">Search your career opportunity through <strong>12,800</strong> jobs</div>
 
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+                            <div class="pxp-hero-form mt-3 mt-lg-4">
+                                <p>Global link solutions is a set of younger entrepreneurs who had labored in senior positions in organizations within the regions such as records generation, investment banking, Retail, car enterprise, Housing & construction industry in India, Dubai and in Japan.</p>
+                            </div>
 
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
+                            <div class="pxp-hero-searches-container">
+                                <div class="pxp-hero-searches-label">Popular Searches</div>
+                                <div class="pxp-hero-searches">
+                                    <div class="pxp-hero-searches-items">
+                                        <a href="#">Work from home</a>
+                                        <a href="#">Part-time</a>
+                                        <a href="#">Administration</a>
+                                        <a href="#">Finance</a>
+                                        <a href="#">Retail</a>
+                                        <a href="#">IT</a>
+                                        <a href="#">Engineering</a>
+                                        <a href="#">Sales</a>
+                                        <a href="#">Manufacturing</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-none d-xl-block col-xl-5 position-relative">
+                            <div class="pxp-hero-cards-container pxp-animate-cards pxp-mouse-move" data-speed="160">
+                                <div class="pxp-hero-card pxp-cover pxp-cover-top" style="background-image: url(images/hero-bg-1.jpg);"></div>
+                                <div class="pxp-hero-card-dark"></div>
+                                <div class="pxp-hero-card-light"></div>
+                            </div>
 
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
- */
-?>
-<!DOCTYPE HTML>
-<html>
-<head>
-
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-      
-        <title> Job Portal </title>
-        <script type="application/javascript">
-            $(document).ready(function(){
-                // Add smooth scrolling to all links in navbar + footer link
-                $(".navbar a, footer a[href='#insidenav']").on('click', function(event) {
-
-                    // Prevent default anchor click behavior
-                    event.preventDefault();
-
-                    // Store hash
-                    var hash = this.hash;
-
-                    // Using jQuery's animate() method to add smooth page scroll
-                    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-                    $('html, body').animate({
-                        scrollTop: $(hash).offset().top
-                    }, 900, function(){
-
-                        // Add hash (#) to URL when done scrolling (default click behavior)
-                        window.location.hash = hash;
-                    });
-                });
-                $(window).scroll(function() {
-                    $(".slideanim").each(function(){
-                        var pos = $(this).offset().top;
-
-                        var winTop = $(window).scrollTop();
-                        if (pos < winTop + 600) {
-                            $(this).addClass("slide");
-                        }
-                    });
-                });
-            })
-        </script>
-    </head>
-        
-<nav class="navbar" id="insidenav">
-  <div class="container-fluid">
-      <div class="navbar-header">
-          <a class="navbar-brand" href="#">Job Portal</a>
-      </div>
-
-    <ul class="nav navbar-nav">
-      <li class="active"><a data-toggle="tab" href="#main1">Home</a></li>
-        <li><a data-toggle="tab" href="#recent"">Recent Jobs</a></li>
-      <li><a data-toggle="tab" href="#jobseeker">Job Seeker</a></li>
-      <li><a data-toggle="tab" href="#">Employer</a></li>
-      <li><a data-toggle="tab" href="#contact">Contact Us</a></li>
-    </ul>
-
-    <ul class="nav navbar-nav navbar-right">
-                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <span class="glyphicon glyphicon-user"></span> Register <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="jobseeker/register_user.php">Jobseeker</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="employer/register_emp.php">Employer</a></li>
-                    </ul>
-                </li>
-                <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-    </ul>
-  </div>
-</nav>
-    <!--- -------------------------------------------------------------------------------------------------- -->
-    <body id="indexbody" data-spy="scroll" data-target=".navbar" data-offset="60">
-<div class="bmsTop">
-    <ul>
-        <li style="font-size: 15px; font-weight: bold">Top Recruiters:</li>
-        <li><a href="#" target="_blank">
-                <img src="images/1.gif" border="0">
-            </a></li>
-        <li><a href="#" target="_blank">
-                <img src="images/2.gif" border="0">
-            </a></li>
-        <li><a href="#" target="_blank">
-                <img src="images/3.gif" border="0"></a>
-        </li>
-        <li><a href="#" target="_blank">
-                <img src="images/4.gif" border="0"></a></li>
-        <li><a href="#" target="_blank">
-                <img src="images/5.gif" border="0"></a>
-        </li>
-    </ul>
-</div>
-
-<div class="container-fluid" id="main1"> <!-- jumbotron fluid -->
-<div class="jumbotron text-center" id="searchjum">
-<h1>Job Portal</h1>
-    <p>Search for Jobs</p>
-    <form class="form-inline" id="homesearch">
-        <input type="text" class="form-control" size="50" placeholder="Enter your search keyword" name="keyword" id="keyword">
-        <button type="button" onclick="search()" class="btn btn-lg " style="color: black"><span class="glyphicon glyphicon-search"></span> Search</button>
-    </form>
-</div>
-</div> <!-- jumbotron -->
-
-<div class="container" id="subcontent" style="background: transparent">
-    <!-- div for search contents -->
-</div>
-<div class="page-header" style="background:#1abc9c"></div>
-<div class="container-fluid" style="background: transparent">
-    <div class="text-center">
-        <h2>Register</h2>
-        <h4>Register in this website for a better experience</h4>
-    </div>
-    <div class="row">
-        <div class="col-sm-4">
-            <div class="panel panel-default text-center">
-                <div class="panel-heading">
-                    <h1>Employers</h1>
-                </div>
-                <div class="panel-body">
-                    <p style="font-size: 16px">Register today and post a job in easy steps and start receiving applications the same day.
-                        Find the right candidates easily and quickly through our Search feature.</p>
-                </div>
-                <div class="panel-footer">
-                    <h3>$0</h3>
-                   <a href="employer/register_emp.php" style="color: inherit"> <button class="btn btn-lg">Sign Up</button></a>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="panel panel-default text-center">
-                <div class="panel-heading">
-                    <h1>Job Seekers</h1>
-                </div>
-                <div class="panel-body">
-                    <p style="font-size: 16px">Helps passive and active jobseekers find better jobs. Get connected with over 45000 recruiters.
-                        Apply to jobs in just one click. Apply to thousands of jobs posted daily.</p>
-                </div>
-                <div class="panel-footer">
-                    <h3>$0</h3>
-                    <a href="jobseeker/register_user.php" style="color: inherit"><button class="btn btn-lg">Sign Up</button></a>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="panel panel-default text-center">
-                <div class="panel-heading">
-                    <h1>Premium</h1>
-                </div>
-                <div class="panel-body">
-                    <p style="font-size: 16px;">Better Exposure <br>
-                        Better Support</p>
-                </div>
-                <div class="panel-footer">
-                    <h3>$4</h3>
-                    <h4>per month</h4>
-                    <button class="btn btn-lg disabled">Upgrade</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-    <div class="container bg-grey" id="contact">
-        <div class="page-header" style="background: #f4511e"></div>
-        <h2 class="text-center">CONTACT US</h2>
-        <div class="page-header"></div>
-        <div class="row">
-            <div class="col-sm-5">
-                <p>Contact us and we'll get back to you within 24 hours.</p>
-                <p><span class="glyphicon glyphicon-map-marker"></span> Kozhikode, India</p>
-                <p><span class="glyphicon glyphicon-phone"></span> +91 8943 202726</p>
-                <p><span class="glyphicon glyphicon-envelope"></span> info@jobportal.com</p>
-            </div>
-
-            <div class="col-sm-7">
-                <div class="row">
-                    <div class="col-sm-6 form-group">
-                        <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-                    </div>
-                    <div class="col-sm-6 form-group">
-                        <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-                    </div>
-                </div>
-                <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
-                <div class="row">
-                    <div class="col-sm-12 form-group">
-                        <button class="btn btn-default pull-right" type="submit">Send</button>
+                            <div class="pxp-hero-card-info-container pxp-mouse-move" data-speed="60">
+                                <div class="pxp-hero-card-info pxp-animate-bounce">
+                                    <div class="pxp-hero-card-info-item">
+                                        <div class="pxp-hero-card-info-item-number">286<span>job offers</span></div>
+                                        <div class="pxp-hero-card-info-item-description">in Business Development</div>
+                                    </div>
+                                    <div class="pxp-hero-card-info-item">
+                                        <div class="pxp-hero-card-info-item-number">154<span>job offers</span></div>
+                                        <div class="pxp-hero-card-info-item-description">in Marketing & Communication</div>
+                                    </div>
+                                    <div class="pxp-hero-card-info-item">
+                                        <div class="pxp-hero-card-info-item-number">319<span>job offers</span></div>
+                                        <div class="pxp-hero-card-info-item-description">in Human Resources</div>
+                                    </div>
+                                    <div class="pxp-hero-card-info-item">
+                                        <div class="pxp-hero-card-info-item-number">120<span>job offers</span></div>
+                                        <div class="pxp-hero-card-info-item-description">in Project Management</div>
+                                    </div>
+                                    <div class="pxp-hero-card-info-item">
+                                        <div class="pxp-hero-card-info-item-number">176<span>job offers</span></div>
+                                        <div class="pxp-hero-card-info-item-description">in Customer Service</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div> <!-- Contact -->
 
-</div> <!-- sub content -->
- <div class="page-header" style="background: #f4511e"></div>
-</div> <!-- Container -->
-<!-- Set height and width with CSS -->
-<div id="googleMap" style="height:400px;width:100%;"></div>
+            <div class="pxp-hero-logos-carousel-container">
+                <div class="pxp-container">
+                    <div class="row pxp-pl-80">
+                        <div class="col-12 col-xl-6">
+                            <div class="pxp-hero-logos-carousel owl-carousel">
+                                <img src="images/hero-logo-1.svg" alt="Logo 1">
+                                <img src="images/hero-logo-2.svg" alt="Logo 2">
+                                <img src="images/hero-logo-3.svg" alt="Logo 3">
+                                <img src="images/hero-logo-4.svg" alt="Logo 4">
+                                <img src="images/hero-logo-5.svg" alt="Logo 5">
+                                <img src="images/hero-logo-6.svg" alt="Logo 6">
+                                <img src="images/hero-logo-7.svg" alt="Logo 7">
+                                <img src="images/hero-logo-1.svg" alt="Logo 8">
+                                <img src="images/hero-logo-2.svg" alt="Logo 9">
+                                <img src="images/hero-logo-3.svg" alt="Logo 10">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-<!-- Add Google Maps -->
-<script src="http://maps.googleapis.com/maps/api/js"></script>
-<script>
-    var myCenter = new google.maps.LatLng(11.2680519,75.7891479);
+            <div class="pxp-hero-right-bg-card pxp-has-animation"></div>
+        </section>
 
-    function initialize() {
-        var mapProp = {
-            center:myCenter,
-            zoom:12,
-            scrollwheel:false,
-            draggable:false,
-            mapTypeId:google.maps.MapTypeId.ROADMAP
-        };
+        <section class="mt-100">
+            <div class="pxp-container">
+                <h2 class="pxp-section-h2 text-center">Job Categories we offer</h2>
+                <p class="pxp-text-light text-center">Following are the job categories we do provide support to get your dream job abroad.</p>
 
-        var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+                <div class="row mt-4 mt-md-5 pxp-animate-in pxp-animate-in-top">
+                    <div class="col-12 col-md-4 col-lg-3 col-xxl-2 pxp-categories-card-1-container">
+                        <a href="#" class="pxp-categories-card-1">
+                            <div class="pxp-categories-card-1-icon-container">
+                                <div class="pxp-categories-card-1-icon">
+                                    <span class="fa fa-pie-chart"></span>
+                                </div>
+                            </div>
+                            <div class="pxp-categories-card-1-title">Business Development</div>
+                            <div class="pxp-categories-card-1-subtitle">139 open positions</div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-3 col-xxl-2 pxp-categories-card-1-container">
+                        <a href="#" class="pxp-categories-card-1">
+                            <div class="pxp-categories-card-1-icon-container">
+                                <div class="pxp-categories-card-1-icon">
+                                    <span class="fa fa-bullhorn"></span>
+                                </div>
+                            </div>
+                            <div class="pxp-categories-card-1-title">Marketing & Communication</div>
+                            <div class="pxp-categories-card-1-subtitle">366 open positions</div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-3 col-xxl-2 pxp-categories-card-1-container">
+                        <a href="#" class="pxp-categories-card-1">
+                            <div class="pxp-categories-card-1-icon-container">
+                                <div class="pxp-categories-card-1-icon">
+                                    <span class="fa fa-address-card-o"></span>
+                                </div>
+                            </div>
+                            <div class="pxp-categories-card-1-title">Human Resources</div>
+                            <div class="pxp-categories-card-1-subtitle">435 open positions</div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-3 col-xxl-2 pxp-categories-card-1-container">
+                        <a href="#" class="pxp-categories-card-1">
+                            <div class="pxp-categories-card-1-icon-container">
+                                <div class="pxp-categories-card-1-icon">
+                                    <span class="fa fa-calendar-o"></span>
+                                </div>
+                            </div>
+                            <div class="pxp-categories-card-1-title">Project Management</div>
+                            <div class="pxp-categories-card-1-subtitle">324 open positions</div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-3 col-xxl-2 pxp-categories-card-1-container">
+                        <a href="#" class="pxp-categories-card-1">
+                            <div class="pxp-categories-card-1-icon-container">
+                                <div class="pxp-categories-card-1-icon">
+                                    <span class="fa fa-comments-o"></span>
+                                </div>
+                            </div>
+                            <div class="pxp-categories-card-1-title">Customer Service</div>
+                            <div class="pxp-categories-card-1-subtitle">39 open positions</div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-3 col-xxl-2 pxp-categories-card-1-container">
+                        <a href="#" class="pxp-categories-card-1">
+                            <div class="pxp-categories-card-1-icon-container">
+                                <div class="pxp-categories-card-1-icon">
+                                    <span class="fa fa-terminal"></span>
+                                </div>
+                            </div>
+                            <div class="pxp-categories-card-1-title">Software Engineering</div>
+                            <div class="pxp-categories-card-1-subtitle">439 open positions</div>
+                        </a>
+                    </div>
+                </div>
 
-        var marker = new google.maps.Marker({
-            position:myCenter,
-        });
+                <div class="mt-4 mt-md-5 text-center pxp-animate-in pxp-animate-in-top">
+                    <a href="#" class="btn rounded-pill pxp-section-cta">All Categories<span class="fa fa-angle-right"></span></a>
+                </div>
+            </div>
+        </section>
 
-        marker.setMap(map);
-    }
+        <section class="mt-100 pt-100 pb-100" style="background-color: var(--pxpSecondaryColorLight);">
+            <div class="pxp-container">
+                <h2 class="pxp-section-h2 text-center">Featured Job Offers</h2>
+                <p class="pxp-text-light text-center">Search your career opportunity through 12,800 jobs</p>
 
-    google.maps.event.addDomListener(window, 'load', initialize);
-</script>
-<footer class="container-fluid text-center">
-    <a href="#insidenav" title="To Top">
-        <span class="glyphicon glyphicon-chevron-up"></span>
-    </a>
-    <p>Job Portal</p>
-</footer>
-</body>
-    <script src="js/jquery-1.12.0.min.js"></script>
-    <script src="js/search.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <link href="css/home.css" rel="stylesheet">
-    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
-</html>
+                <div class="row mt-4 mt-md-5 pxp-animate-in pxp-animate-in-top">
+                    <div class="col-md-6 col-xl-4 col-xxl-3 pxp-jobs-card-1-container">
+                        <div class="pxp-jobs-card-1 pxp-has-shadow">
+                            <div class="pxp-jobs-card-1-top">
+                                <a href="#" class="pxp-jobs-card-1-category">
+                                    <div class="pxp-jobs-card-1-category-icon"><span class="fa fa-bullhorn"></span></div>
+                                    <div class="pxp-jobs-card-1-category-label">Marketing & Communication</div>
+                                </a>
+                                <a href="single-job-1.html" class="pxp-jobs-card-1-title">Senior Editor</a>
+                                <div class="pxp-jobs-card-1-details">
+                                    <a href="#" class="pxp-jobs-card-1-location">
+                                        <span class="fa fa-globe"></span>San Francisco, CA
+                                    </a>
+                                    <div class="pxp-jobs-card-1-type">Full-time</div>
+                                </div>
+                            </div>
+                            <div class="pxp-jobs-card-1-bottom">
+                                <div class="pxp-jobs-card-1-bottom-left">
+                                    <div class="pxp-jobs-card-1-date pxp-text-light">3 days ago by</div>
+                                    <a href="single-company-1.html" class="pxp-jobs-card-1-company">Artistre Studio</a>
+                                </div>
+                                <a href="single-company-1.html" class="pxp-jobs-card-1-company-logo" style="background-image: url(images/company-logo-1.png);"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4 col-xxl-3 pxp-jobs-card-1-container">
+                        <div class="pxp-jobs-card-1 pxp-has-shadow">
+                            <div class="pxp-jobs-card-1-top">
+                                <a href="#" class="pxp-jobs-card-1-category">
+                                    <div class="pxp-jobs-card-1-category-icon"><span class="fa fa-calendar-o"></span></div>
+                                    <div class="pxp-jobs-card-1-category-label">Project Management</div>
+                                </a>
+                                <a href="single-job-1.html" class="pxp-jobs-card-1-title">Software Engineering Team Leader</a>
+                                <div class="pxp-jobs-card-1-details">
+                                    <a href="#" class="pxp-jobs-card-1-location">
+                                        <span class="fa fa-globe"></span>Los Angeles, CA
+                                    </a>
+                                    <div class="pxp-jobs-card-1-type">Full-time</div>
+                                </div>
+                            </div>
+                            <div class="pxp-jobs-card-1-bottom">
+                                <div class="pxp-jobs-card-1-bottom-left">
+                                    <div class="pxp-jobs-card-1-date pxp-text-light">3 days ago by</div>
+                                    <a href="single-company-1.html" class="pxp-jobs-card-1-company">Craftgenics</a>
+                                </div>
+                                <a href="single-company-1.html" class="pxp-jobs-card-1-company-logo" style="background-image: url(images/company-logo-2.png);"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4 col-xxl-3 pxp-jobs-card-1-container">
+                        <div class="pxp-jobs-card-1 pxp-has-shadow">
+                            <div class="pxp-jobs-card-1-top">
+                                <a href="#" class="pxp-jobs-card-1-category">
+                                    <div class="pxp-jobs-card-1-category-icon"><span class="fa fa-comments-o"></span></div>
+                                    <div class="pxp-jobs-card-1-category-label">Customer Service</div>
+                                </a>
+                                <a href="single-job-1.html" class="pxp-jobs-card-1-title">Techincal Support Engineer</a>
+                                <div class="pxp-jobs-card-1-details">
+                                    <a href="#" class="pxp-jobs-card-1-location">
+                                        <span class="fa fa-globe"></span>Paris, France
+                                    </a>
+                                    <div class="pxp-jobs-card-1-type">Full-time</div>
+                                </div>
+                            </div>
+                            <div class="pxp-jobs-card-1-bottom">
+                                <div class="pxp-jobs-card-1-bottom-left">
+                                    <div class="pxp-jobs-card-1-date pxp-text-light">3 days ago by</div>
+                                    <a href="single-company-1.html" class="pxp-jobs-card-1-company">Illuminate Studio</a>
+                                </div>
+                                <a href="single-company-1.html" class="pxp-jobs-card-1-company-logo" style="background-image: url(images/company-logo-3.png);"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4 col-xxl-3 pxp-jobs-card-1-container">
+                        <div class="pxp-jobs-card-1 pxp-has-shadow">
+                            <div class="pxp-jobs-card-1-top">
+                                <a href="#" class="pxp-jobs-card-1-category">
+                                    <div class="pxp-jobs-card-1-category-icon"><span class="fa fa-terminal"></span></div>
+                                    <div class="pxp-jobs-card-1-category-label">Software Engineering</div>
+                                </a>
+                                <a href="single-job-1.html" class="pxp-jobs-card-1-title">Javascript Developer</a>
+                                <div class="pxp-jobs-card-1-details">
+                                    <a href="#" class="pxp-jobs-card-1-location">
+                                        <span class="fa fa-globe"></span>London, UK
+                                    </a>
+                                    <div class="pxp-jobs-card-1-type">Full-time</div>
+                                </div>
+                            </div>
+                            <div class="pxp-jobs-card-1-bottom">
+                                <div class="pxp-jobs-card-1-bottom-left">
+                                    <div class="pxp-jobs-card-1-date pxp-text-light">3 days ago by</div>
+                                    <a href="single-company-1.html" class="pxp-jobs-card-1-company">Syspresoft</a>
+                                </div>
+                                <a href="single-company-1.html" class="pxp-jobs-card-1-company-logo" style="background-image: url(images/company-logo-4.png);"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4 col-xxl-3 pxp-jobs-card-1-container">
+                        <div class="pxp-jobs-card-1 pxp-has-shadow">
+                            <div class="pxp-jobs-card-1-top">
+                                <a href="#" class="pxp-jobs-card-1-category">
+                                    <div class="pxp-jobs-card-1-category-icon"><span class="fa fa-pie-chart"></span></div>
+                                    <div class="pxp-jobs-card-1-category-label">Business Development</div>
+                                </a>
+                                <a href="single-job-1.html" class="pxp-jobs-card-1-title">Technical Writer</a>
+                                <div class="pxp-jobs-card-1-details">
+                                    <a href="#" class="pxp-jobs-card-1-location">
+                                        <span class="fa fa-globe"></span>London, UK
+                                    </a>
+                                    <div class="pxp-jobs-card-1-type">Full-time</div>
+                                </div>
+                            </div>
+                            <div class="pxp-jobs-card-1-bottom">
+                                <div class="pxp-jobs-card-1-bottom-left">
+                                    <div class="pxp-jobs-card-1-date pxp-text-light">3 days ago by</div>
+                                    <a href="single-company-1.html" class="pxp-jobs-card-1-company">Gramware</a>
+                                </div>
+                                <a href="single-company-1.html" class="pxp-jobs-card-1-company-logo" style="background-image: url(images/company-logo-5.png);"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4 col-xxl-3 pxp-jobs-card-1-container">
+                        <div class="pxp-jobs-card-1 pxp-has-shadow">
+                            <div class="pxp-jobs-card-1-top">
+                                <a href="#" class="pxp-jobs-card-1-category">
+                                    <div class="pxp-jobs-card-1-category-icon"><span class="fa fa-address-card-o"></span></div>
+                                    <div class="pxp-jobs-card-1-category-label">Human Resources</div>
+                                </a>
+                                <a href="single-job-1.html" class="pxp-jobs-card-1-title">Human Resources Coordinator</a>
+                                <div class="pxp-jobs-card-1-details">
+                                    <a href="#" class="pxp-jobs-card-1-location">
+                                        <span class="fa fa-globe"></span>San Francisco, CA
+                                    </a>
+                                    <div class="pxp-jobs-card-1-type">Full-time</div>
+                                </div>
+                            </div>
+                            <div class="pxp-jobs-card-1-bottom">
+                                <div class="pxp-jobs-card-1-bottom-left">
+                                    <div class="pxp-jobs-card-1-date pxp-text-light">3 days ago by</div>
+                                    <a href="single-company-1.html" class="pxp-jobs-card-1-company">Bitbytech</a>
+                                </div>
+                                <a href="single-company-1.html" class="pxp-jobs-card-1-company-logo" style="background-image: url(images/company-logo-6.png);"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4 col-xxl-3 pxp-jobs-card-1-container">
+                        <div class="pxp-jobs-card-1 pxp-has-shadow">
+                            <div class="pxp-jobs-card-1-top">
+                                <a href="#" class="pxp-jobs-card-1-category">
+                                    <div class="pxp-jobs-card-1-category-icon"><span class="fa fa-terminal"></span></div>
+                                    <div class="pxp-jobs-card-1-category-label">Software Engineering</div>
+                                </a>
+                                <a href="single-job-1.html" class="pxp-jobs-card-1-title">Fullstack Web Developer</a>
+                                <div class="pxp-jobs-card-1-details">
+                                    <a href="#" class="pxp-jobs-card-1-location">
+                                        <span class="fa fa-globe"></span>New York, NY
+                                    </a>
+                                    <div class="pxp-jobs-card-1-type">Full-time</div>
+                                </div>
+                            </div>
+                            <div class="pxp-jobs-card-1-bottom">
+                                <div class="pxp-jobs-card-1-bottom-left">
+                                    <div class="pxp-jobs-card-1-date pxp-text-light">3 days ago by</div>
+                                    <a href="single-company-1.html" class="pxp-jobs-card-1-company">CoderBotics</a>
+                                </div>
+                                <a href="single-company-1.html" class="pxp-jobs-card-1-company-logo" style="background-image: url(images/company-logo-7.png);"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4 col-xxl-3 pxp-jobs-card-1-container">
+                        <div class="pxp-jobs-card-1 pxp-has-shadow">
+                            <div class="pxp-jobs-card-1-top">
+                                <a href="#" class="pxp-jobs-card-1-category">
+                                    <div class="pxp-jobs-card-1-category-icon"><span class="fa fa-bullhorn"></span></div>
+                                    <div class="pxp-jobs-card-1-category-label">Marketing & Communication</div>
+                                </a>
+                                <a href="single-job-1.html" class="pxp-jobs-card-1-title">Social Media Expert</a>
+                                <div class="pxp-jobs-card-1-details">
+                                    <a href="#" class="pxp-jobs-card-1-location">
+                                        <span class="fa fa-globe"></span>San Francisco, CA
+                                    </a>
+                                    <div class="pxp-jobs-card-1-type">Full-time</div>
+                                </div>
+                            </div>
+                            <div class="pxp-jobs-card-1-bottom">
+                                <div class="pxp-jobs-card-1-bottom-left">
+                                    <div class="pxp-jobs-card-1-date pxp-text-light">3 days ago by</div>
+                                    <a href="single-company-1.html" class="pxp-jobs-card-1-company">Artistre Studio</a>
+                                </div>
+                                <a href="single-company-1.html" class="pxp-jobs-card-1-company-logo" style="background-image: url(images/company-logo-1.png);"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+        <section class="mt-100">
+            <div class="pxp-container">
+                <h2 class="pxp-section-h2 text-center">Find Best Companies</h2>
+                <p class="pxp-text-light text-center">Work for the best companies in the world</p>
+
+                <div class="row mt-4 mt-md-5 pxp-animate-in pxp-animate-in-top">
+                    <div class="col-md-6 col-xl-4 col-xxl-3 pxp-companies-card-1-container">
+                        <div class="pxp-companies-card-1 pxp-has-border">
+                            <div class="pxp-companies-card-1-top">
+                                <a href="single-company-1.html" class="pxp-companies-card-1-company-logo" style="background-image: url(images/company-logo-1.png);"></a>
+                                <a href="single-company-1.html" class="pxp-companies-card-1-company-name">Artistre Studio</a>
+                                <div class="pxp-companies-card-1-company-description pxp-text-light">Is an American multinational computer software company. Incorporated in Delaware and headquartered in San Jose, California, it has historically specialized in software for the creation.</div>
+                            </div>
+                            <div class="pxp-companies-card-1-bottom">
+                                <a href="#" class="pxp-companies-card-1-company-jobs">10 jobs</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4 col-xxl-3 pxp-companies-card-1-container">
+                        <div class="pxp-companies-card-1 pxp-has-border">
+                            <div class="pxp-companies-card-1-top">
+                                <a href="single-company-1.html" class="pxp-companies-card-1-company-logo" style="background-image: url(images/company-logo-7.png);"></a>
+                                <a href="single-company-1.html" class="pxp-companies-card-1-company-name">CoderBotics</a>
+                                <div class="pxp-companies-card-1-company-description pxp-text-light">Is an American multinational computer software company. Incorporated in Delaware and headquartered in San Jose, California.</div>
+                            </div>
+                            <div class="pxp-companies-card-1-bottom">
+                                <a href="#" class="pxp-companies-card-1-company-jobs">14 jobs</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4 col-xxl-3 pxp-companies-card-1-container">
+                        <div class="pxp-companies-card-1 pxp-has-border">
+                            <div class="pxp-companies-card-1-top">
+                                <a href="single-company-1.html" class="pxp-companies-card-1-company-logo" style="background-image: url(images/company-logo-4.png);"></a>
+                                <a href="single-company-1.html" class="pxp-companies-card-1-company-name">Syspresoft</a>
+                                <div class="pxp-companies-card-1-company-description pxp-text-light">Is an American multinational computer software company. Incorporated in Delaware and headquartered in San Jose, California, it has historically specialized in software for the creation.</div>
+                            </div>
+                            <div class="pxp-companies-card-1-bottom">
+                                <a href="#" class="pxp-companies-card-1-company-jobs">10 jobs</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4 col-xxl-3 pxp-companies-card-1-container">
+                        <div class="pxp-companies-card-1 pxp-has-border">
+                            <div class="pxp-companies-card-1-top">
+                                <a href="single-company-1.html" class="pxp-companies-card-1-company-logo" style="background-image: url(images/company-logo-3.png);"></a>
+                                <a href="single-company-1.html" class="pxp-companies-card-1-company-name">Illuminate Studio</a>
+                                <div class="pxp-companies-card-1-company-description pxp-text-light">Is an American multinational computer software company. Incorporated in Delaware and headquartered in San Jose, California.</div>
+                            </div>
+                            <div class="pxp-companies-card-1-bottom">
+                                <a href="#" class="pxp-companies-card-1-company-jobs">14 jobs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </section>
+
+        <section class="mt-100">
+            <div class="pxp-container">
+                <h2 class="pxp-section-h2 text-center">Featured Cities</h2>
+                <p class="pxp-text-light text-center">Start your next carrer in a beautiful city</p>
+
+                <div class="row mt-4 mt-md-5 pxp-animate-in pxp-animate-in-top">
+                    <div class="col-md-6 col-xl-4 col-xxl-3">
+                        <a href="#" class="pxp-cities-card-2">
+                            <div class="pxp-cities-card-2-image-container">
+                                <div class="pxp-cities-card-2-image pxp-cover" style="background-image: url(images/city-3.jpg);"></div>
+                            </div>
+                            <div class="pxp-cities-card-2-info">
+                                <div class="pxp-cities-card-2-name">London, UK</div>
+                                <div class="pxp-cities-card-2-jobs">452 open positions</div>
+                            </div>
+                        </a>
+                        <a href="#" class="pxp-cities-card-2">
+                            <div class="pxp-cities-card-2-image-container">
+                                <div class="pxp-cities-card-2-image pxp-cover" style="background-image: url(images/city-4.jpg);"></div>
+                            </div>
+                            <div class="pxp-cities-card-2-info">
+                                <div class="pxp-cities-card-2-name">San Francisco, CA</div>
+                                <div class="pxp-cities-card-2-jobs">144 open positions</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-xl-4 col-xxl-3">
+                        <a href="#" class="pxp-cities-card-2 pxp-is-featured">
+                            <div class="pxp-cities-card-2-image-container">
+                                <div class="pxp-cities-card-2-image pxp-cover" style="background-image: url(images/city-6.jpg);"></div>
+                            </div>
+                            <div class="pxp-cities-card-2-info">
+                                <div class="pxp-cities-card-2-name">Paris, France</div>
+                                <div class="pxp-cities-card-2-jobs">452 open positions</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-xl-4 col-xxl-3">
+                        <a href="#" class="pxp-cities-card-2">
+                            <div class="pxp-cities-card-2-image-container">
+                                <div class="pxp-cities-card-2-image pxp-cover" style="background-image: url(images/city-1.jpg);"></div>
+                            </div>
+                            <div class="pxp-cities-card-2-info">
+                                <div class="pxp-cities-card-2-name">San Francisco, CA</div>
+                                <div class="pxp-cities-card-2-jobs">244 open positions</div>
+                            </div>
+                        </a>
+                        <a href="#" class="pxp-cities-card-2">
+                            <div class="pxp-cities-card-2-image-container">
+                                <div class="pxp-cities-card-2-image pxp-cover" style="background-image: url(images/city-2.jpg);"></div>
+                            </div>
+                            <div class="pxp-cities-card-2-info">
+                                <div class="pxp-cities-card-2-name">Los Angeles, CA</div>
+                                <div class="pxp-cities-card-2-jobs">144 open positions</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-xl-4 col-xxl-3">
+                        <a href="#" class="pxp-cities-card-2">
+                            <div class="pxp-cities-card-2-image-container">
+                                <div class="pxp-cities-card-2-image pxp-cover" style="background-image: url(images/city-5.jpg);"></div>
+                            </div>
+                            <div class="pxp-cities-card-2-info">
+                                <div class="pxp-cities-card-2-name">London, UK</div>
+                                <div class="pxp-cities-card-2-jobs">452 open positions</div>
+                            </div>
+                        </a>
+                        <a href="#" class="pxp-cities-card-2">
+                            <div class="pxp-cities-card-2-image-container">
+                                <div class="pxp-cities-card-2-image pxp-cover" style="background-image: url(images/city-3.jpg);"></div>
+                            </div>
+                            <div class="pxp-cities-card-2-info">
+                                <div class="pxp-cities-card-2-name">San Francisco, CA</div>
+                                <div class="pxp-cities-card-2-jobs">144 open positions</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-100">
+            <div class="pxp-container">
+                <h2 class="pxp-section-h2 text-center">Stay Up to Date</h2>
+                <p class="pxp-text-light text-center">Subscribe to our newsletter to receive our weekly feed.</p>
+
+                <div class="row mt-4 mt-md-5 justify-content-center">
+                    <div class="col-md-9 col-lg-7 col-xl-6 col-xxl-5">
+                        <div class="pxp-subscribe-1-container pxp-animate-in pxp-animate-in-top">
+                            <div class="pxp-subscribe-1-image">
+                                <img src="images/subscribe.png" alt="Stay Up to Date">
+                            </div>
+                            <div class="pxp-subscribe-1-form">
+                                <form>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Enter your email...">
+                                        <button class="btn btn-primary" type="button">Subscribe<span class="fa fa-angle-right"></span></button>
+                                      </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <?php include('parts/footer.php') ?>

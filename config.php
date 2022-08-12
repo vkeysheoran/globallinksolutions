@@ -23,9 +23,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 $host = "localhost";
 $user  = "root";
-$password =  "sreelal";
-$database1 = "jobportal";
-$database2 = "location";
+$password =  "";
+$database1 = "globallink";
+$database2 = "globallink";
 $db1 = new mysqli($host, $user, $password, $database1);
 /*if($db1->connect_errno > 0){
     die('Unable to connect to database' . $db1->connect_error);
