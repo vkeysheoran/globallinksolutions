@@ -20,7 +20,20 @@
                 <p class="pxp-text-light text-center">We help employers and candidates find the right fit</p>
 
                 <div class="mt-4 mt-md-5 text-center">
-                    <p>Maximum foreign-affiliated groups doing business in India discover in Delhi NCR due its tremendous enterprise surroundings. Global Link Solutions is based out of  New Delhi with communities of many foreign residents from around the sector. Almost 8000 eastern expats residing in Delhi NCR.</p>
+                    <p style="text-align: justify;">Global Link Solutions is a trusted & prominent human resource consulting company which stands tall to serve manpower
+needs and in providing a wide range of cross-border recruitment solution to its clients.
+Our journey began from 2019 and since then, we strive to link careers with the best in the industry.
+We provide our services in various sectors such as: Automobile, Education, Financial Services, Global Sourcing, Real Estate
+& Telecom. Our expanding ourselves in the Healthcare Sector: Doctors, Staff Nurses (Male & Female), Non-Physician
+Technicians, Paramedical and Pharmacist Staffing & other Core Industries like Construction Sector,, Hotels and Hospitality
+Sector and Higher Education providing Engineers, Professionals, Blue-Collared Workers,Skilled/Semi & Unskilled manpower
+for Gulf & UAE countries.
+We have been providing end-to-end recruitment services and are a complete one-stop solution company and our philosophy
+from the beginning has been to offer our clients qualified and experienced personnel within their professions and satisfying
+client needs has been a key to our growth as our services are aimed at maintaining long-term partnerships with our
+cherished clients and to minimise risks involved & to optimise profit and growth with highest quality services in an ethical and
+professional manner. By this we not only ensure the growth of our Employers by adding quality support through our
+candidates but also the growth of every single candidate in their respective fields and lives.</p>
                 </div>
             </div>
         </div>
@@ -154,11 +167,11 @@
                                         <div class="pxp-testimonials-1-carousel-item-name">Kenneth Spiers</div>
                                         <div class="pxp-testimonials-1-carousel-item-company">Syspresoft</div>
                                     </div>
-                                    <div class="carousel-item text-center">
+                                    <!-- <div class="carousel-item text-center">
                                         <div class="pxp-testimonials-1-carousel-item-text">Global Link Solutions is an ever-changing workplace, striving to innovate by bringing employers and candidates together. We are dedicated to improving our clients’ lives as well as our own employees.</div>
                                         <div class="pxp-testimonials-1-carousel-item-name">Rebecca Eason</div>
                                         <div class="pxp-testimonials-1-carousel-item-company">Craftgenics</div>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <button class="carousel-control-prev" type="button" data-bs-target="#pxpTestimonials1Carousel" data-bs-slide="prev">
                                     <span class="fa fa-angle-left" aria-hidden="true"></span>

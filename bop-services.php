@@ -40,7 +40,7 @@
                                 </div>
                                 <div class="mt-4">
                                     <h4>Both concepts are also often referred to as the “Bottom of the Pyramid” or the “BoP”.</h4>
-                                    <img src="images/bop.png" style="width: 100%;">
+                                    <img src="images/bops.png" style="width: 100%;">
                                 </div>
                                 <div class="mt-4">
 
@@ -70,7 +70,7 @@
                         </div>
                     </div>
 
-                    
+
                 </div>
             </div>
         </div>

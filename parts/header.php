@@ -90,46 +90,7 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li class="nav-item dropdown">
-                                            <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">IT Services</a>
-                                            <ul class="dropdown-menu">
-                                                <li class="dropdown dropend">
-                                                    <a class="pxp-has-icon-small" href="software-development.php">
-                                                        <div class="pxp-dropdown-icon">
-                                                            <span class="fa fa-th-large"></span>
-                                                        </div>
-                                                        <div class="pxp-dropdown-text">
-                                                            Software Development
-                                                            <span>Software , Mobile Apps , Website Development</span>
-                                                        </div>
-                                                    </a>
 
-                                                </li>
-                                                <li class="dropdown dropend">
-                                                    <a class="pxp-has-icon-small" href="it-services.php" >
-                                                        <div class="pxp-dropdown-icon">
-                                                            <span class="fa fa-file-text-o"></span>
-                                                        </div>
-                                                        <div class="pxp-dropdown-text">
-                                                            IT Consulting
-                                                            <span>Hardware / Software Consulting</span>
-                                                        </div>
-                                                    </a>
-
-                                                </li>
-                                                <li>
-                                                    <a href="mrps-services.php" class="pxp-has-icon-small">
-                                                        <div class="pxp-dropdown-icon">
-                                                            <span class="fa fa-cogs"></span>
-                                                        </div>
-                                                        <div class="pxp-dropdown-text">
-                                                            Web & Mobile Applications
-                                                            <span>Best in service</span>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </li>
                                         <li class="nav-item dropdown">
                                             <a  href="contact.php" class="nav-link " >Contact Us</a>
 
@@ -190,57 +151,15 @@
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">IT Services</a>
-                                <ul class="dropdown-menu">
-                                    <li class="dropdown dropend">
-                                        <a class="pxp-has-icon-small" href="software-development.php">
-                                            <div class="pxp-dropdown-icon">
-                                                <span class="fa fa-th-large"></span>
-                                            </div>
-                                            <div class="pxp-dropdown-text">
-                                                Software Development
-                                                <span>Software , Mobile Apps , Website Development</span>
-                                            </div>
-                                        </a>
-
-                                    </li>
-                                    <li class="dropdown dropend">
-                                        <a class="pxp-has-icon-small" href="it-services.php" >
-                                            <div class="pxp-dropdown-icon">
-                                                <span class="fa fa-file-text-o"></span>
-                                            </div>
-                                            <div class="pxp-dropdown-text">
-                                                IT Consulting
-                                                <span>Hardware / Software Consulting</span>
-                                            </div>
-                                        </a>
-
-                                    </li>
-                                    <li>
-                                        <a href="mrps-services.php" class="pxp-has-icon-small">
-                                            <div class="pxp-dropdown-icon">
-                                                <span class="fa fa-cogs"></span>
-                                            </div>
-                                            <div class="pxp-dropdown-text">
-                                                Web & Mobile Applications
-                                                <span>Best in service</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">Blog</a>
-
+                                <a href="our-mission.php" class="dropdown-toggle">Our Mission</a>
                             </li>
                             <li class="dropdown">
                                 <a href="contact.php" class="dropdown-toggle">Contact Us</a>
-
                             </li>
                         </ul>
                     </nav>
                     <nav class="pxp-user-nav d-none d-sm-flex">
-                        <a href="contact.php" class="btn rounded-pill pxp-nav-btn">Contact</a>
+                        <a href="contact.php" class="btn rounded-pill pxp-nav-btn">Post Your Requirements</a>
                     </nav>
                 </div>
             </div>
